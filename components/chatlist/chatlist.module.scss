@@ -1,0 +1,15 @@
+.chatlist {
+  margin-left: 40rem;
+  margin-right: 40rem;
+  margin-top: 18rem;
+  display: flex;
+  gap: 8rem;
+  flex-wrap: wrap;
+  background-color: transparent;
+
+  .type {
+    width: 100%;
+    font-size: 3rem;
+    color: var(--main-darker);
+  }
+}

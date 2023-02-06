@@ -1,0 +1,53 @@
+.roomsBar {
+  position: fixed;
+  top: 12rem;
+  right: 0;
+  width: 19rem;
+  height: calc(100vh - 12rem);
+  border-left: 0.3rem solid var(--main);
+  box-shadow: var(--shadow-left);
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: var(--main-darker);
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 3rem 2.8rem 1rem 5rem;
+      font-size: 2rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      .head {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.wrapper {
+  padding: 8rem;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 25rem auto;
+  border: 0.3rem solid var(--main);
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+
+    label {
+      font-size: 5rem;
+      align-self: center;
+      color: var(--main);
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    input {
+      font-size: 3rem;
+      padding: 1rem;
+      outline: none;
+      border: 0.2rem solid var(--main);
+      color: var(--main);
+      border-radius: 0.5rem;
+    }
+
+    .error {
+      border: 0.2rem solid red;
+      box-shadow: var(--shadow);
+    }
+
+    button {
+      position: relative;
+      background-color: transparent;
+      height: 7rem;
+      width: 14rem;
+      color: var(--main);
+      padding: 2rem;
+      font-weight: 500;
+      font-size: 2rem;
+      border: 0.2rem solid var(--main);
+      cursor: pointer;
+      transition: all 0.5s ease;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        transition: all 0.5s ease;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        background-color: var(--main-darker);
+      }
+
+      &:hover {
+        color: white;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    .loader {
+      display: flex;
+      gap: 0.8rem;
+
+      .ball {
+        border-radius: 50%;
+        background-color: var(--main);
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+
+    div {
+      display: flex;
+      gap: 3rem;
+
+      p {
+        max-width: 50%;
+        font-size: 2rem;
+        color: red;
+        font-weight: 500;
+      }
+    }
+  }
+}

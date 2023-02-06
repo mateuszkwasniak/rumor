@@ -1,0 +1,191 @@
+.chat {
+  border: 0.3rem solid var(--main);
+  width: 50rem;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  position: relative;
+
+  .roomMates {
+    padding: 2rem 5rem;
+    position: absolute;
+    top: 6rem;
+    right: 50%;
+    width: 49.5rem;
+    transform: translateX(50%);
+    background-color: var(--background);
+    max-height: 30rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    .mate {
+      color: var(--main-darker);
+      font-weight: 500;
+      font-size: 2rem;
+    }
+
+    hr {
+      width: 50%;
+      height: 0;
+      border: none;
+      border-bottom: 0.2rem solid var(--main);
+    }
+  }
+
+  .header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.2rem solid var(--main);
+
+    span {
+      font-size: 3rem;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      button,
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .conversation {
+    padding: 2rem;
+    height: 50rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    span {
+      color: var(--main-darker);
+      font-weight: 500;
+      display: block;
+      width: 100%;
+      padding: 0.2rem 1rem;
+      font-size: 1.4rem;
+    }
+
+    .serverMessage {
+      align-self: center;
+      color: var(--main-darker);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .message {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 15px;
+      max-width: 100%;
+      background-color: var(--main);
+
+      p {
+        padding: 1.3rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: white;
+        letter-spacing: 0.03rem;
+        word-break: break-all;
+      }
+    }
+
+    .reverse {
+      align-self: flex-end;
+      span {
+        text-align: end;
+      }
+
+      p {
+        color: black;
+      }
+    }
+
+    .message.reverse {
+      background-color: var(--secondary);
+    }
+
+    .reverse .message {
+      background-color: var(--secondary);
+    }
+  }
+
+  form {
+    width: 100%;
+    padding: 1rem;
+    border-top: 0.2rem solid var(--main);
+    background-color: transparent;
+    display: flex;
+
+    input {
+      flex: 1;
+      outline: none;
+      padding: 1rem;
+      font-size: 2rem;
+      border: none;
+      background-color: transparent;
+    }
+
+    button {
+      position: relative;
+      padding: 1rem 2rem;
+      border: none;
+      border-left: 0.2rem solid var(--main);
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        transition: all 0.5s ease;
+        width: 0;
+        height: 100%;
+        background-color: var(--main);
+        z-index: -1;
+      }
+
+      &:hover {
+        color: var(--background);
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.activeChat {
+  box-shadow: var(--shadow);
+}

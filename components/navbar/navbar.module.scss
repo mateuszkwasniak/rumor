@@ -1,0 +1,117 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  height: 12rem;
+  width: 100%;
+  background-color: var(--background);
+  border-bottom: 0.3rem solid var(--main);
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+
+  .logo {
+    margin-left: 5rem;
+    cursor: pointer;
+    h1 {
+      font-size: 6rem;
+      color: var(--main);
+      letter-spacing: 0.3rem;
+    }
+
+    .logoSpan {
+      font-size: 2rem;
+      text-align: start;
+    }
+  }
+
+  .welcome {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--main-darker);
+  }
+
+  form {
+    margin-left: auto;
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+    padding-top: 3.2rem;
+
+    input {
+      outline: none;
+      background-color: transparent;
+      font-size: 2rem;
+      border: none;
+      padding-bottom: 1rem;
+      border-bottom: 0.2rem solid var(--main);
+    }
+
+    .submitBtn {
+      border: none;
+      background-color: transparent;
+      padding-bottom: 1rem;
+
+      .submitIcon {
+        width: 3rem;
+        height: 3rem;
+        color: var(--main);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .buttons {
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--main-darker);
+      line-height: 3rem;
+
+      span {
+        font-size: 3rem;
+      }
+    }
+
+    button,
+    a {
+      position: relative;
+      background-color: transparent;
+      color: var(--main);
+      padding: 2rem;
+      font-weight: 500;
+      font-size: 2rem;
+      border: 0.2rem solid var(--main);
+      cursor: pointer;
+      transition: all 0.5s ease;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        transition: all 0.5s ease;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        background-color: var(--main-darker);
+      }
+
+      &:hover {
+        color: white;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
