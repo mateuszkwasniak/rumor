@@ -7,7 +7,7 @@ import { authOptions } from "./api/auth/[...nextauth]";
 import { motion } from "framer-motion";
 
 //socket.io
-import io from "@socket.io-client/dist/socket.io";
+import io from "socket.io-client/dist/socket.io";
 import { roomContext } from "@/store/room-ctx";
 
 const Home = ({ username, sessionID, userID }) => {
