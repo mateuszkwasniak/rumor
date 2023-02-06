@@ -118,7 +118,7 @@ const Home = ({ username, sessionID, userID }) => {
   };
 
   useEffect(() => {
-    const socket = io("https://socket-chat-server-s22k.onrender.com", {
+    const socket = io("https://socket-chat-server-nyhs.onrender.com", {
       autoConnect: false,
     });
 
